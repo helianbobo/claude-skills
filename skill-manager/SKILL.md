@@ -1,6 +1,6 @@
 ---
 name: skill-manager
-description: Comprehensive skill management system for opencode. Installs, validates, lists, and manages skills in the opencode skills directory. Use when users need to: (1) Install a skill from directory or .skill file, (2) Validate skill structure before installation, (3) List installed skills with details, (4) Update existing skills, or (5) Manage opencode skill ecosystem.
+description: "Comprehensive skill management system for opencode. Installs, validates, lists, and manages skills in the opencode skills directory. Use when users need to: (1) Install a skill from directory or .skill file, (2) Validate skill structure before installation, (3) List installed skills with details, (4) Update existing skills, or (5) Manage opencode skill ecosystem."
 ---
 
 # Skill Manager

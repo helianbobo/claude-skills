@@ -17,7 +17,7 @@ import zipfile
 import tempfile
 from pathlib import Path
 
-def validate_skill_directory(skill_path: Path) -> tuple[bool, str]:
+def validate_skill_directory(skill_path: Path):
     """
     Validate a skill directory structure.
     Returns (is_valid, message)
@@ -98,7 +98,7 @@ def validate_skill_directory(skill_path: Path) -> tuple[bool, str]:
     
     return True, f"Skill '{skill_path.name}' is valid!"
 
-def validate_skill_file(skill_file: Path) -> tuple[bool, str]:
+def validate_skill_file(skill_file: Path):
     """
     Validate a .skill file.
     Returns (is_valid, message)

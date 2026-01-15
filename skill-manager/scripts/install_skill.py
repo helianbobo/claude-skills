@@ -22,7 +22,7 @@ import tempfile
 # Default opencode skills directory
 SKILLS_DIR = Path.home() / ".config" / "opencode" / "skill"
 
-def validate_skill_structure(skill_path: Path) -> tuple[bool, str]:
+def validate_skill_structure(skill_path: Path):
     """
     Validate basic skill structure.
     Returns (is_valid, message)

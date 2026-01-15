@@ -190,7 +190,7 @@ def get_daily_words(learner_data: dict, count: int = 5) -> dict:
     }
 
 
-def add_word(learner_data: dict, word: str, level: int = None) -> dict:
+def add_word(learner_data: dict, word: str, level: Optional[int] = None) -> dict:
     """Add a new word to learner's vocabulary."""
     if level is None:
         level = learner_data.get("current_level", 1)

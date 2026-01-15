@@ -197,11 +197,30 @@ Present sections one by one.
 4. **Generate lesson content** (see Content Generation below)
 
 5. **Interactive practice:**
-   - Present words one by one
-   - For children: Ask learner to use each word in a sentence (80% English, 20% mother tongue instructions). **Important: Children must always answer in English.**
-   - For adults: Ask learner to use each word in a sentence (English instructions)
-   - Read story together
-   - **Ask questions one by one**: Present each comprehension question individually, wait for the learner's answer, provide feedback, then move to the next question. Never ask all questions at once.
+   **Critically Important:** Present each of the following components sequentially. Do **not** show the next component until the user has completed the current one or confirmed they are ready.
+
+   **A. Focus Words & Usage:**
+   - Present the 5 words with definitions.
+   - **Action**: Ask the learner to make a sentence with each word (or selected words).
+   - *Wait for user response before proceeding.*
+
+   **B. Contextual Sentences:**
+   - Present the generated example sentences.
+   - *Wait for user confirmation (e.g., "Ready", "Next") before proceeding.*
+
+   **C. Short Story:**
+   - Present the integrated short story.
+   - *Wait for user confirmation before proceeding.*
+
+   **D. Output Patterns:**
+   - Present the sentence starters.
+   - **Action**: Wait for the learner to complete the sentences.
+
+   **E. Comprehension Questions:**
+   - **Action**: Present questions **strictly one by one**.
+   - Show Question 1 -> Wait for Answer -> Provide Feedback -> Show Question 2...
+   - Never list all questions at once.
+
    - **Reminder for children**: If a child answers in their mother tongue, gently remind them: "Please answer in English! 请用英语回答！"
 
 6. **Score and update each word:**
@@ -266,8 +285,8 @@ For each daily set of 5 focus words, generate:
 
 | Content Type | Quantity | Guidelines |
 |-------------|----------|------------|
-| Contextual sentences | 5 | One per word, age-appropriate context |
-| Integrated short story | 1 | 120-150 words (children) or 150-200 words (adults) using all 5 words |
+| Contextual sentences | 5 | One per word, age-appropriate context. **Highlight focus words using brackets and uppercase (e.g., [WORD]).** |
+| Integrated short story | 1 | 120-150 words (children) or 150-200 words (adults) using all 5 words. |
 | Reading questions | 4-5 | **Children**: Mostly multiple-choice/yes-no, max 1 open-ended. **Adults**: Mix of multiple-choice, short answer, and open-ended. **Present ONE question at a time.** **Randomize correct answers** (avoid patterns like all 'B'). |
 | Output patterns | 1-2 | Sentence starters for learner to complete |
 

@@ -50,12 +50,17 @@ def save_learner(name: str, data: dict) -> None:
     print(f"Saved learner data to {filepath}")
 
 
-def init_learner(name: str, age: int = 10, level: int = 1) -> dict:
+def init_learner(name: str, age: int = 10, level: int = 1, 
+                 learner_type: str = "child", mother_tongue: Optional[str] = None,
+                 interests: Optional[str] = None) -> dict:
     """Initialize a new learner profile."""
     data = {
         "name": name,
         "age": age,
         "current_level": level,
+        "learner_type": learner_type,
+        "mother_tongue": mother_tongue,
+        "interests": interests,
         "created_date": datetime.now().isoformat(),
         "last_session": None,
         "total_sessions": 0,
@@ -270,6 +275,57 @@ def update_assessment(learner_data: dict, level: int, vocab_size: int) -> dict:
     return learner_data
 
 
+def update_interests(learner_data: dict, interests: str) -> dict:
+    """Update learner interests."""
+    learner_data["interests"] = interests
+    return learner_data
+
+
+def export_learner(name: str, output_path: Optional[str] = None) -> None:
+    """Export learner profile to a specific location."""
+    data = load_learner(name)
+    if not data:
+        print(f"Learner '{name}' not found.")
+        return
+
+    if output_path:
+        target_path = Path(output_path)
+    else:
+        target_path = Path.cwd() / f"{name}-export.json"
+
+    # Create parent directories if they don't exist
+    target_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    with open(target_path, "w") as f:
+        json.dump(data, f, indent=2, default=str)
+    print(f"Exported learner profile for {name} to {target_path}")
+
+
+def import_learner(import_path: str) -> None:
+    """Import learner profile from a file."""
+    source_path = Path(import_path)
+    if not source_path.exists():
+        print(f"File not found: {source_path}")
+        return
+
+    try:
+        with open(source_path, "r") as f:
+            data = json.load(f)
+        
+        name = data.get("name")
+        if not name:
+            print("Invalid profile: Missing learner name")
+            return
+            
+        # Save to standard location
+        save_learner(name, data)
+        print(f"Imported learner profile for {name}")
+    except json.JSONDecodeError:
+        print(f"Error: {source_path} is not a valid JSON file")
+    except Exception as e:
+        print(f"Error importing profile: {e}")
+
+
 def get_stats(learner_data: dict) -> dict:
     """Get comprehensive learner statistics."""
     vocabulary = learner_data.get("vocabulary", {})
@@ -343,6 +399,9 @@ def main():
     init_parser.add_argument("name", help="Learner name")
     init_parser.add_argument("--age", type=int, default=10, help="Learner age")
     init_parser.add_argument("--level", type=int, default=1, help="Starting level (1-5)")
+    init_parser.add_argument("--type", dest="learner_type", default="child", choices=["child", "adult"], help="Learner type")
+    init_parser.add_argument("--mother-tongue", help="Mother tongue (for children)")
+    init_parser.add_argument("--interests", help="Comma-separated list of interests")
 
     # show command
     show_parser = subparsers.add_parser("show", help="Show learner profile")
@@ -373,6 +432,20 @@ def main():
     assess_parser.add_argument("--vocab-size", type=int, required=True,
                                help="Estimated vocabulary size")
 
+    # update-interests command
+    interests_parser = subparsers.add_parser("update-interests", help="Update learner interests")
+    interests_parser.add_argument("name", help="Learner name")
+    interests_parser.add_argument("--interests", required=True, help="New interests string")
+
+    # export command
+    export_parser = subparsers.add_parser("export", help="Export learner profile")
+    export_parser.add_argument("name", help="Learner name")
+    export_parser.add_argument("--output", help="Output file path")
+
+    # import command
+    import_parser = subparsers.add_parser("import", help="Import learner profile")
+    import_parser.add_argument("path", help="Path to profile json file")
+
     # stats command
     stats_parser = subparsers.add_parser("stats", help="Get detailed statistics")
     stats_parser.add_argument("name", help="Learner name")
@@ -380,7 +453,7 @@ def main():
     args = parser.parse_args()
 
     if args.command == "init":
-        init_learner(args.name, args.age, args.level)
+        init_learner(args.name, args.age, args.level, args.learner_type, args.mother_tongue, args.interests)
 
     elif args.command == "show":
         data = load_learner(args.name)
@@ -422,6 +495,21 @@ def main():
             print(f"Assessment recorded: Level {args.level}, Vocab size {args.vocab_size}")
         else:
             print(f"Learner '{args.name}' not found.")
+
+    elif args.command == "update-interests":
+        data = load_learner(args.name)
+        if data:
+            data = update_interests(data, args.interests)
+            save_learner(args.name, data)
+            print(f"Updated interests for {args.name}")
+        else:
+            print(f"Learner '{args.name}' not found.")
+
+    elif args.command == "export":
+        export_learner(args.name, args.output)
+
+    elif args.command == "import":
+        import_learner(args.path)
 
     elif args.command == "stats":
         data = load_learner(args.name)

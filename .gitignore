@@ -1,1 +1,10 @@
 dist/*
+.agent/skills/english-tutor/SKILL.md
+.agent/skills/english-tutor/references/assessment-guide.md
+.agent/skills/english-tutor/references/spaced-repetition.md
+.agent/skills/english-tutor/references/vocabulary-lists.md
+.agent/skills/english-tutor/references/PaxHeader/assessment-guide.md
+.agent/skills/english-tutor/references/PaxHeader/spaced-repetition.md
+.agent/skills/english-tutor/references/PaxHeader/vocabulary-lists.md
+.agent/skills/english-tutor/scripts/progress_manager.py
+.agent/skills/english-tutor/scripts/PaxHeader/progress_manager.py

@@ -169,6 +169,8 @@ python scripts/progress_manager.py show <name>
 
 ### Daily Session: Lesson Flow
 
+Present sections one by one.
+
 1. **Load learner data and get daily words:**
    ```bash
    python scripts/progress_manager.py get-daily <name> --count 5
@@ -259,7 +261,7 @@ For each daily set of 5 focus words, generate:
 |-------------|----------|------------|
 | Contextual sentences | 5 | One per word, age-appropriate context |
 | Integrated short story | 1 | 120-150 words (children) or 150-200 words (adults) using all 5 words |
-| Reading questions | 4-5 | **Children**: Mostly multiple-choice/yes-no, max 1 open-ended. **Adults**: Mix of multiple-choice, short answer, and open-ended. **Present ONE question at a time.** |
+| Reading questions | 4-5 | **Children**: Mostly multiple-choice/yes-no, max 1 open-ended. **Adults**: Mix of multiple-choice, short answer, and open-ended. **Present ONE question at a time.** **Randomize correct answers** (avoid patterns like all 'B'). |
 | Output patterns | 1-2 | Sentence starters for learner to complete |
 
 ### Contextual Sentences Example

@@ -92,14 +92,21 @@ python scripts/progress_manager.py init <name> --level <level> --type adult --in
 python scripts/progress_manager.py get-daily <name> --count 5
 ```
 
-**Add new word to vocabulary:**
+**Add new word(s) to vocabulary:**
 ```bash
-python scripts/progress_manager.py add-word <name> <word> --level <level>
+python scripts/progress_manager.py add-word <name> <word1> <word2> ... [--level <level>]
+# Example: python scripts/progress_manager.py add-word Zishen sword grass --level 1
 ```
 
 **Update word after review (quality 0-5):**
 ```bash
 python scripts/progress_manager.py update <name> <word> <quality>
+```
+
+**Update multiple words at once:**
+```bash
+python scripts/progress_manager.py update-batch <name> <word1>=<quality1> <word2>=<quality2> ...
+# Example: python scripts/progress_manager.py update-batch Chao learn=5 excited=4
 ```
 
 **Record assessment results:**

@@ -415,7 +415,7 @@ def main():
     # add-word command
     add_parser = subparsers.add_parser("add-word", help="Add word to vocabulary")
     add_parser.add_argument("name", help="Learner name")
-    add_parser.add_argument("word", help="Word to add")
+    add_parser.add_argument("words", nargs="+", help="Word(s) to add")
     add_parser.add_argument("--level", type=int, help="Word level")
 
     # update command
@@ -424,6 +424,11 @@ def main():
     update_parser.add_argument("word", help="Word reviewed")
     update_parser.add_argument("quality", type=int, choices=range(6),
                                help="Quality score (0-5)")
+
+    # update-batch command
+    update_batch_parser = subparsers.add_parser("update-batch", help="Update multiple words")
+    update_batch_parser.add_argument("name", help="Learner name")
+    update_batch_parser.add_argument("updates", nargs="+", help="Pairs of word=quality (e.g. apple=5)")
 
     # assess command
     assess_parser = subparsers.add_parser("assess", help="Record assessment results")
@@ -473,7 +478,8 @@ def main():
     elif args.command == "add-word":
         data = load_learner(args.name)
         if data:
-            data = add_word(data, args.word, args.level)
+            for word in args.words:
+                data = add_word(data, word, args.level)
             save_learner(args.name, data)
         else:
             print(f"Learner '{args.name}' not found.")
@@ -484,6 +490,25 @@ def main():
             data = update_word(data, args.word, args.quality)
             save_learner(args.name, data)
             print(f"Updated '{args.word}' with quality {args.quality}")
+        else:
+            print(f"Learner '{args.name}' not found.")
+
+    elif args.command == "update-batch":
+        data = load_learner(args.name)
+        if data:
+            for update_str in args.updates:
+                try:
+                    word, quality_str = update_str.split('=')
+                    quality = int(quality_str)
+                    if 0 <= quality <= 5:
+                        data = update_word(data, word, quality)
+                        print(f"Updated '{word}' with quality {quality}")
+                    else:
+                        print(f"Skipping '{word}': Quality must be 0-5")
+                except ValueError:
+                    print(f"Skipping invalid format '{update_str}'. Use word=quality")
+            
+            save_learner(args.name, data)
         else:
             print(f"Learner '{args.name}' not found.")
 

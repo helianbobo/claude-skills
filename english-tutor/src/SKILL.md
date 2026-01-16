@@ -281,12 +281,19 @@ Generate stories and content with varied themes to maintain engagement and cultu
 
 ### Content Requirements
 
+**Story Structure: The Power of Inquiry**
+All stories should follow a "learning through inquiry" model:
+- **Challenge/Goal**: Characters face a problem or want to create something new.
+- **Strategic Questioning**: Instead of guessing, characters ask a series of thoughtful, targeted questions (e.g., "Why does it work this way?", "What if we tried...?", "How can we make it...?") to gather information.
+- **Action/Discovery**: Based on the answers they receive, they take action or reach a breakthrough.
+- **Resolution**: They successfully build something fun or acquire significant new knowledge.
+
 For each daily set of 5 focus words, generate:
 
 | Content Type | Quantity | Guidelines |
 |-------------|----------|------------|
 | Contextual sentences | 5 | One per word, age-appropriate context. **Highlight focus words using brackets and uppercase (e.g., [WORD]).** |
-| Integrated short story | 1 | 120-150 words (children) or 150-200 words (adults) using all 5 words. |
+| Integrated short story | 1 | 120-150 words (children) or 150-200 words (adults) using all 5 words. **Story focus**: Characters should learn new knowledge or build something fun through asking a series of good questions. |
 | Reading questions | 4-5 | **Children**: Mostly multiple-choice/yes-no, max 1 open-ended. **Adults**: Mix of multiple-choice, short answer, and open-ended. **Present ONE question at a time.** **Randomize correct answers** (avoid patterns like all 'B'). |
 | Output patterns | 1-2 | Sentence starters for learner to complete |
 
@@ -304,29 +311,27 @@ For words: **excited, discover, beautiful, remember, different**
 
 **For Children:**
 
-> **The Discovery**
+> **The Robotic Bird**
 >
-> Maya felt **excited** as she walked through the forest with her grandfather. Today was **different** from their usual walks because Grandpa had a surprise.
+> Leo was **excited** to build a mechanical bird, but he didn't know how to make it fly. "Grandpa, why does a real bird stay in the air?" he asked. 
 >
-> "I want to show you something **beautiful**," he said with a smile.
+> "It's about the shape of the wings," Grandpa explained. Leo looked at his model. "Is this wing shape **different** from a real bird's wing?" 
 >
-> They followed a winding path until they reached a clearing. Maya gasped. A meadow filled with butterflies stretched before them—hundreds of orange and black wings dancing in the sunlight.
+> He adjusted the curves. "How can I make it flap?" he questioned. They studied a book about gears to **discover** the answer. 
 >
-> "I wanted you to **discover** this place yourself," Grandpa said. "I found it when I was your age."
->
-> Maya knew she would **remember** this moment forever. She squeezed Grandpa's hand and watched the butterflies swirl around them like living confetti.
+> Finally, Leo pulled a string. The bird flapped its **beautiful** wings and glided across the room. "I will **remember** how these gears work!" Leo cheered. He had built something amazing just by asking the right questions.
 
-**For Adults** (using same words with different theme):
+**For Adults:**
 
-> **The Startup Pivot**
+> **The Sustainable Workshop**
 >
-> Elena felt both **excited** and nervous as she presented to the board. The past quarter had been **different**—market research revealed their original product wasn't solving the right problem.
+> Elena was **excited** to design a zero-waste workshop. She knew the process would be **different** from traditional construction. 
 >
-> "We need to **remember** why we started this company," she began, pulling up her slides. "To help small businesses thrive."
+> "What materials have the lowest carbon footprint?" she asked the architect. Then, "How can we **discover** local sources for reclaimed wood?" 
 >
-> Her team had spent months analyzing user feedback, only to **discover** something unexpected: customers weren't struggling with the features they'd built. They needed something far more fundamental—a tool to understand their own cash flow patterns.
+> After gathering data, she asked, "Is it possible to capture enough solar energy for all our tools?" Each question led to a **beautiful** solution, like the skylights that provided natural light. 
 >
-> The solution, once they saw it, seemed **beautiful** in its simplicity. Instead of adding complexity, they would strip away everything except the core insight their users desperately needed. The pivot was risky, but Elena knew they had finally found their true mission.
+> "We must **remember** that the right questions are as important as the final build," Elena told her team. By challenging every assumption with a question, they had built more than just a workshop—they had created a model for the future.
 
 ### Reading Questions Example
 
@@ -334,45 +339,45 @@ For words: **excited, discover, beautiful, remember, different**
 
 **For Children** (mostly multiple-choice/yes-no, max 1 open-ended):
 
-1. Where did Maya and her grandfather go?
-   - A) To the park
-   - B) To the forest
-   - C) To the beach
-   - D) To the store
+1. What did Leo want to build?
+   - A) A real bird
+   - B) A mechanical bird
+   - C) A paper airplane
+   - D) A birdhouse
 
-2. Was today's walk the same as their usual walks?
+2. Did Leo know how to make the bird fly at the beginning?
    - A) Yes
    - B) No
 
-3. When Maya saw the butterflies, she probably felt:
-   - A) Scared
-   - B) Bored
-   - C) Amazed and happy
-   - D) Angry
+3. What did Leo and Grandpa study to find the answer about flapping?
+   - A) A book about clouds
+   - B) A book about gears
+   - C) A book about flowers
+   - D) A book about cars
 
-4. What does "living confetti" mean in the story?
-   - A) Paper falling from the sky
-   - B) The colorful butterflies moving around
-   - C) Flowers in the meadow
-   - D) Grandpa's surprise
+4. What helped Leo build the amazing bird?
+   - A) Buying a new toy
+   - B) Asking the right questions
+   - C) Giving up quickly
+   - D) Sleeping all day
 
-5. (Open-ended) What do you think Maya will tell her friends about this trip?
+5. (Open-ended) If you were building something new, what is one "good question" you would ask to help you learn?
 
 **For Adults** (mixed format):
 
-1. Where did Maya and her grandfather go? (multiple-choice)
-   - A) To a forest clearing with a butterfly meadow
-   - B) To a mountain peak
-   - C) To a hidden waterfall
-   - D) To a botanical garden
+1. Why was Elena's project different from traditional construction? (multiple-choice)
+   - A) It was built in a different country
+   - B) It focused on zero-waste and sustainability
+   - C) It was built much faster
+   - D) It used expensive, rare diamonds
 
-2. How did Maya's emotional state evolve throughout the story? (short answer)
+2. How did asking questions about "local sources" and "solar energy" affect the final build? (short answer)
 
-3. Why might Grandpa have waited until now to show Maya this special place? (open-ended)
+3. Elena mentioned that questions are as important as the final build. Why do you think she believes this? (open-ended)
 
-4. What does the phrase "living confetti" suggest about the author's writing style? (open-ended)
+4. In what way does the "Power of Inquiry" model apply to this story? (open-ended)
 
-5. The story emphasizes intergenerational connection. How does the setting reinforce this theme? (open-ended)
+5. How might this questioning approach benefit a team in a real-world professional setting? (open-ended)
 
 ### Output Patterns Example
 
